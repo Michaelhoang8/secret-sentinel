@@ -1,0 +1,1 @@
+"""Secret Sentinel: standalone application."""

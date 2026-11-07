@@ -1,0 +1,34 @@
+{
+  "app": "secret-sentinel",
+  "mode": "secrets",
+  "source": "Michaelhoang8/portfolio-lab",
+  "backend_definitions": {
+    "capabilities": [
+      "enrich",
+      "table"
+    ],
+    "validation": [
+      "ConflictError",
+      "NotFoundError",
+      "ValidationError"
+    ],
+    "data_apps": [
+      "safe_csv"
+    ],
+    "security_apps": [
+      "SECRET_RULES",
+      "scan_secrets",
+      "source"
+    ],
+    "json_input": [
+      "decode",
+      "read_exact"
+    ],
+    "db": [
+      "SCHEMA",
+      "connect",
+      "initialize",
+      "rows"
+    ]
+  }
+}

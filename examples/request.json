@@ -1,0 +1,6 @@
+{
+  "path": "/api/security/secrets",
+  "body": {
+    "text": "password = \"DEMO_ONLY_NOT_A_REAL_PASSWORD\""
+  }
+}
