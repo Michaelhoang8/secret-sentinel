@@ -151,3 +151,37 @@ body[data-app] .panel .section-head a{color:var(--blue);font-size:12px;text-unde
 
 body[data-app] button.report-export{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:9px 13px;font:600 12px/1.5 Arial,sans-serif}
 body[data-app] button.report-export:hover:not(:disabled){background:var(--bg);border-color:var(--blue)}
+
+/* Redacted scan report */
+body[data-app=secrets] { --bg:#f7f3f4; --blue:#865c70; --line:#e0d5dc; }
+body[data-app=secrets] main { max-width:1450px; padding-top:28px; }
+body[data-app=secrets] .workspace { grid-template-columns:320px minmax(0,1fr); gap:32px; align-items:start; }
+body[data-app=secrets] .source { padding:22px; background:#302630; color:#eadce6; border:0; border-radius:4px; }
+body[data-app=secrets] .source :is(label,.hint,#input-help,#notice) { color:#b9a6b7!important; }
+body[data-app=secrets] .source input,body[data-app=secrets] #source,body[data-app=secrets] .source select { color:#e2cddb; background:#261e29; border:1px solid #5b4659; }
+body[data-app=secrets] #source { height:300px; font-size:11px; }
+body[data-app=secrets] .source .text-button { color:#dab8d1; }
+body[data-app=secrets] #run { width:100%; min-width:0; background:#c9a5bb; color:#362133; border-color:#c9a5bb; }
+body[data-app=secrets] .clear { width:100%; float:none; margin-top:10px; color:#d0bdcb; background:transparent; border-color:#5b4659; }
+body[data-app=secrets] .results { padding:0; border:0; background:transparent; }
+.scan-gate { display:grid; grid-template-columns:1fr auto; gap:12px 20px; padding:22px 25px; margin:23px 0; border:1px solid #dac2cf; background:#f1e5eb; border-radius:4px; }
+.scan-gate small { font:10px ui-monospace,monospace; letter-spacing:1px; color:#936a82; }
+.scan-gate strong { grid-column:2; grid-row:1/3; align-self:center; font:28px ui-monospace,monospace; color:#955d73; }
+.scan-gate span { font-size:11px; color:#92758a; }
+.scan-gate.passed { background:#eaf0eb; border-color:#c7d8cb; }
+.scan-gate.passed strong { color:#5c7d64; }
+.location-map { background:#fff; border:1px solid var(--line); padding:20px; }
+.location-map h3 { margin:0; font-size:13px; }
+.location-map svg { display:block; width:100%; }
+.location-map text { font:11px ui-monospace,monospace; fill:#998394; }
+.location-axis { stroke:#e0d5dc; stroke-width:2; }
+.location-medium { stroke:#c6a2b9; stroke-width:4; }
+.location-high { stroke:#864d6d; stroke-width:4; }
+.location-map p { font-size:10px; color:#9b8596; margin:0; }
+body[data-app=secrets] .finding { padding:18px 22px; background:#fff; border:1px solid var(--line); border-left:3px solid #c5a7ba; margin:12px 0; }
+body[data-app=secrets] .finding.high { border-left-color:#8d5b77; }
+body[data-app=secrets] .finding h3 { font-size:13px; }
+body[data-app=secrets] .summary { background:#eee6eb; color:#886d80; }
+body[data-app=secrets]:not(.still-life) .scan-gate { animation:gate-arrival .4s ease-out; }
+@keyframes gate-arrival { from { opacity:.4; transform:translateY(4px); } to { opacity:1; transform:none; } }
+@media(max-width:850px) { body[data-app=secrets] .workspace { grid-template-columns:1fr; } body[data-app=secrets] #source { height:200px; } .scan-gate { padding:18px; } }

@@ -4,6 +4,8 @@ Scan pasted source for credential patterns without returning secret values.
 
 ![Secret Sentinel preview](docs/app.png)
 
+The redacted report shows the configured policy gate and a line-location map derived only from finding locations and severity. One mark represents each affected line; darker marks include high severity. Raw values remain omitted and successful scans still clear the input. The gate transition respects reduced-motion and local display settings.
+
 ## Run
 
 Requires Python 3.11+; no third-party runtime dependencies. Clone this repository and run from its root:
